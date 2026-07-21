@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Kendra Consultants"
+version = "1.0.0"
+id = "artifacts/kendra-consultants"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19685
+
+[services.development]
+run = "pnpm --filter @workspace/kendra-consultants run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/kendra-consultants", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/kendra-consultants/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19685"
+BASE_PATH = "/"
