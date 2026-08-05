@@ -1,7 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import mainLogo from "@assets/WhatsApp_Image_2026-07-19_at_08.19.03_1784638489447.jpeg";
+import mainLogo from "@assets/WhatsApp_Image_2026-08-02_at_02.10.15_1785952366037.jpeg";
 
 export function Navbar() {
   const [location] = useLocation();
