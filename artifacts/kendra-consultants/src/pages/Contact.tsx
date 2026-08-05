@@ -32,7 +32,7 @@ const offices = {
     name: "Sri Lanka (Headquarters)",
     address: "Level 12, Parkland Building, 33 Park Street, Colombo 02",
     phone: "+94 71 331 5789",
-    email: "sri-lanka@kendraconsultants.com",
+    email: "sri-lanka@consultkendra.com",
     hours: "Mon-Fri, 8:30 AM - 5:30 PM (IST)"
   },
   qatar: {
@@ -40,7 +40,7 @@ const offices = {
     name: "Qatar",
     address: "Office 45, West Bay Commercial Centre, Diplomatic Area, Doha",
     phone: "+974 4423 8910",
-    email: "qatar@kendraconsultants.com",
+    email: "qatar@consultkendra.com",
     hours: "Sun-Thu, 8:00 AM - 5:00 PM (AST)"
   },
   australia: {
@@ -48,7 +48,7 @@ const offices = {
     name: "Australia",
     address: "Suite 8, Level 14, 333 Collins Street, Melbourne VIC 3000",
     phone: "+61 3 9876 5432",
-    email: "australia@kendraconsultants.com",
+    email: "australia@consultkendra.com",
     hours: "Mon-Fri, 9:00 AM - 5:00 PM (AEST)"
   }
 };

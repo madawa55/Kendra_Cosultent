@@ -94,7 +94,14 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-white/10 pt-8 mb-6 flex items-center gap-3">
+          <Mail className="w-4 h-4 text-secondary shrink-0" />
+          <a href="mailto:info@consultkendra.com" className="text-white/70 hover:text-secondary text-sm transition-colors">
+            info@consultkendra.com
+          </a>
+        </div>
+
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/50 text-sm">
             © {new Date().getFullYear()} Kendra Consultants. All rights reserved.
           </p>
