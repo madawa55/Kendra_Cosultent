@@ -61,7 +61,7 @@ export function Navbar() {
               href="/contact"
               className="bg-gradient-to-r from-[#C9A84C] to-[#9A6E1F] text-white px-6 py-2.5 text-sm font-semibold tracking-wide transition-all hover:shadow-lg hover:shadow-secondary/20 hover:-translate-y-0.5"
             >
-              GET A QUOTE
+              CONSULT KENDRA
             </Link>
           </nav>
 
@@ -101,7 +101,7 @@ export function Navbar() {
             className="w-full text-center bg-gradient-to-r from-[#C9A84C] to-[#9A6E1F] text-white px-8 py-4 text-sm font-semibold tracking-widest transition-all"
             onClick={() => setMobileMenuOpen(false)}
           >
-            GET A QUOTE
+            CONSULT KENDRA
           </Link>
         </div>
       </div>

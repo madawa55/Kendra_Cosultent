@@ -31,7 +31,7 @@ const offices = {
     id: "srilanka",
     name: "Sri Lanka (Headquarters)",
     address: "Level 12, Parkland Building, 33 Park Street, Colombo 02",
-    phone: "+94 11 234 5678",
+    phone: "+94 71 331 5789",
     email: "sri-lanka@kendraconsultants.com",
     hours: "Mon-Fri, 8:30 AM - 5:30 PM (IST)"
   },
@@ -97,7 +97,7 @@ export default function Contact() {
         <div className="container mx-auto px-4 md:px-6 lg:px-8 text-center max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">Contact Us</h1>
           <p className="text-lg text-white/80 font-light leading-relaxed">
-            Reach out to our experts. We operate globally and are ready to discuss your commercial requirements.
+            Reach out to our experts. We operate globally and are ready to discuss your project needs and provide tailored solutions to support your objectives.
           </p>
         </div>
       </section>

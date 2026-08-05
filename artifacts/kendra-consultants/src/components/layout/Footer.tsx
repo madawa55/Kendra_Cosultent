@@ -17,7 +17,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed pr-4">
-              Built on Trust. Driven by Precision. A world-class construction consulting firm delivering excellence across the globe.
+              Built on Trust. Driven by Precision. Delivering trusted construction consultancy across Sri Lanka, the Middle East and Australia.
             </p>
           </div>
 

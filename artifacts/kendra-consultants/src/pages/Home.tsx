@@ -51,7 +51,7 @@ export default function Home() {
               variants={fadeInUp}
               className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto font-light leading-relaxed"
             >
-              A world-class construction consultancy delivering unparalleled expertise across Sri Lanka, Qatar, and Australia. We engineer certainty into every project.
+              Delivering trusted construction consultancy across Sri Lanka, the Middle East and Australia, Kendra Consultants combines precision, expertise and integrity to provide world-class quantity surveying, commercial management and contract advisory services that bring certainty to every project.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
@@ -103,9 +103,9 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-secondary font-bold tracking-[0.2em] text-sm uppercase mb-4">Our Expertise</h2>
-            <h3 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">Comprehensive Construction Consulting</h3>
+            <h3 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">Delivering Confidence at Every Stage</h3>
             <p className="text-muted-foreground leading-relaxed">
-              We provide end-to-end commercial and contract management services, ensuring your project's financial and legal integrity from inception to completion.
+              We provide integrated quantity surveying, commercial management, procurement, contract advisory and claims consultancy services across Sri Lanka, the Middle East and Australia. Combining technical expertise, commercial acumen, and a commitment to ethical excellence, we support clients in making strategic decisions, optimizing project performance, mitigating risks, and delivering sustainable value throughout the project lifecycle.
             </p>
           </div>
 
@@ -132,15 +132,15 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-secondary font-bold tracking-[0.2em] text-sm uppercase mb-4">Global Reach</h2>
-              <h3 className="text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight">Operating across continents.</h3>
+              <h3 className="text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight">"Precision Beyond Borders"</h3>
               <p className="text-white/70 leading-relaxed mb-8 text-lg">
-                With strategic offices in Sri Lanka, Qatar, and Australia, we bring international best practices and deep local market knowledge to every engagement. Our cross-border capabilities allow us to serve multinational clients seamlessly.
+                With a strategic presence across Sri Lanka, the Middle East and Australia, we bring trusted expertise, commercial insight and professional excellence to support clients in delivering successful projects across international markets.
               </p>
               
               <div className="space-y-6">
                 {[
                   { country: "Sri Lanka", city: "Colombo", role: "Headquarters" },
-                  { country: "Qatar", city: "Doha", role: "Middle East Hub" },
+                  { country: "Middle East", city: "Doha, Qatar", role: "Middle East Hub" },
                   { country: "Australia", city: "Melbourne", role: "Asia Pacific Hub" }
                 ].map((office, i) => (
                   <div key={i} className="flex items-center gap-4 p-4 border border-white/10 bg-white/5 backdrop-blur-sm">
@@ -159,7 +159,7 @@ export default function Home() {
                 <Globe2 className="w-96 h-96 text-white" strokeWidth={0.5} />
               </div>
               <div className="relative z-10 text-center">
-                <h4 className="font-serif text-3xl italic mb-4">"Precision knows no borders."</h4>
+                <h4 className="font-serif text-3xl italic mb-4">"Connecting Expertise Across Markets"</h4>
                 <p className="text-secondary">— Kendra Consultants</p>
               </div>
             </div>
@@ -171,15 +171,15 @@ export default function Home() {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto bg-card border border-border shadow-2xl p-12 md:p-16 text-center">
-            <h2 className="text-3xl font-serif font-bold text-foreground mb-4">Ready to secure your project's future?</h2>
+            <h2 className="text-3xl font-serif font-bold text-foreground mb-4">Need expert guidance for your project?</h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Partner with a firm that treats your capital with the same precision as the engineering itself. Contact our experts today.
+              Every project presents unique challenges and opportunities. Connect with our team to discuss how Kendra Consultants can provide tailored solutions and strategic support aligned with your project objectives.
             </p>
             <Link
               href="/contact"
               className="inline-block px-10 py-4 bg-primary text-white font-semibold tracking-wider text-sm transition-all hover:bg-primary/90"
             >
-              CONTACT US
+              CONSULT KENDRA
             </Link>
           </div>
         </div>

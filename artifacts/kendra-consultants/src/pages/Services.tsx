@@ -7,73 +7,75 @@ const services = [
   {
     icon: Calculator,
     title: "Cost Planning & Estimating",
-    description: "Rigorous financial modeling and cost prediction from conceptual design to project completion. We ensure your budget is realistic, optimized, and strictly adhered to.",
+    description: "Rigorous financial modelling and cost forecasting from project inception through completion. We help clients establish realistic budgets, optimise project costs, and maintain financial control throughout the project lifecycle.",
     features: [
-      "Feasibility estimates & cost modeling",
-      "Detailed bills of quantities (BOQ)",
-      "Value engineering & cost optimization",
-      "Cash flow forecasting",
-      "Life cycle costing"
+      "Feasibility Cost Estimates",
+      "Cost Planning & Budget Development",
+      "Bills of Quantities",
+      "Value Engineering",
+      "Cash Flow Forecasting",
+      "Life Cycle Costing"
     ]
   },
   {
     icon: Briefcase,
     title: "Procurement & Tendering",
-    description: "Strategic procurement advice to secure the right contractors at the right price, minimizing risk and maximizing value for your capital investment.",
+    description: "Strategic procurement advice and tender management to secure the right contractors, achieve commercial certainty, and maximise value throughout the procurement process.",
     features: [
-      "Procurement strategy development",
-      "Tender document preparation",
-      "Tender evaluation & analysis",
-      "Contractor negotiations",
-      "Contract award recommendations"
+      "Procurement Strategy Development",
+      "Preparation of Tender Documentation",
+      "Tender Evaluation & Analysis",
+      "Tender Clarifications & Negotiations",
+      "Contract Award Recommendations"
     ]
   },
   {
     icon: FileSignature,
     title: "Commercial & Contract Management",
-    description: "Proactive administration of construction contracts to protect your commercial interests, ensuring compliance and preventing financial leakage.",
+    description: "Proactive contract and commercial management services that protect client interests, promote contractual compliance, manage commercial risk, and provide effective financial control throughout the project lifecycle.",
     features: [
-      "Contract administration",
-      "Interim valuations & payment certification",
-      "Variation & change order management",
-      "Final account settlement",
-      "Cost reporting & financial audits"
+      "Contract Administration",
+      "Interim Valuations & Payment Certification",
+      "Variation Assessment & Change Management",
+      "Cost Reporting & Commercial Performance Monitoring",
+      "Risk Identification & Commercial Advisory",
+      "Final Account Preparation & Agreement"
     ]
   },
   {
     icon: Scale,
     title: "Claims & Dispute Management",
-    description: "Expert analysis and resolution of construction disputes. We prepare robust claims and provide strategic defense to protect you from unwarranted liabilities.",
+    description: "Professional claims consultancy and commercial advice to support the preparation, evaluation, and resolution of contractual claims while minimising the impact of disputes.",
     features: [
-      "Delay & disruption analysis",
-      "Loss and expense claims",
-      "Extension of Time (EOT) claims",
-      "Expert witness services",
-      "Alternative dispute resolution support"
+      "Delay & Disruption Analysis",
+      "Extension of Time (EOT) Assessments",
+      "Loss & Expense Claims",
+      "Claims Preparation & Evaluation",
+      "Alternative Dispute Resolution Support"
     ]
   },
   {
     icon: Handshake,
     title: "Contractor Advisory Services",
-    description: "Specialized commercial support for main contractors and subcontractors to maximize profitability and ensure fair compensation for works executed.",
+    description: "Specialised commercial advisory support for contractors, subcontractors, developers, and project stakeholders to strengthen commercial performance and manage contractual risk.",
     features: [
-      "Tender pricing & bidding support",
-      "Subcontractor management",
-      "Project cost control",
-      "Claim preparation & negotiation",
-      "Risk identification & mitigation"
+      "Tender Pricing",
+      "Project Cost Control",
+      "Subcontract Administration",
+      "Claims Preparation & Negotiation",
+      "Commercial Risk Management"
     ]
   },
   {
     icon: BookOpen,
     title: "Academic Services & Research",
-    description: "Contributing to the advancement of the quantity surveying profession through tailored academic programs, corporate training, and industry research.",
+    description: "Supporting industry development through professional training, technical research and knowledge-sharing initiatives tailored to organisations and construction professionals.",
     features: [
-      "Corporate training programs",
-      "APC (Assessment of Professional Competence) mentoring",
-      "Industry trend analysis",
-      "Bespoke research reports",
-      "Best practice workshops"
+      "Professional Training Programmes",
+      "Corporate Learning Solutions",
+      "Industry Research",
+      "Technical Publications",
+      "Best Practice Workshops"
     ]
   }
 ];
@@ -99,7 +101,7 @@ export default function Services() {
         <div className="container mx-auto px-4 md:px-6 lg:px-8 text-center max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">Our Services</h1>
           <p className="text-lg text-white/80 font-light leading-relaxed">
-            Comprehensive commercial solutions for the built environment. We engineer financial certainty across the entire project lifecycle.
+            Delivering trusted consultancy solutions for the built environment. We provide strategic commercial expertise and informed guidance to support successful project outcomes throughout the project lifecycle.
           </p>
         </div>
       </section>
@@ -148,15 +150,15 @@ export default function Services() {
       {/* CTA */}
       <section className="py-20 bg-card border-t border-border">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-serif text-3xl font-bold mb-6">Need a bespoke commercial strategy?</h2>
+          <h2 className="font-serif text-3xl font-bold mb-6">Need expert guidance for your project?</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Every project presents unique risks and opportunities. Contact our senior partners to discuss a customized service package tailored to your specific requirements.
+            Every project presents unique challenges and opportunities. Connect with our team to discuss how Kendra Consultants can provide tailored solutions and strategic support aligned with your project objectives.
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center justify-center px-8 py-3 bg-primary text-white font-semibold tracking-wider text-sm transition-all hover:bg-primary/90"
           >
-            CONSULT WITH US
+            CONSULT KENDRA
           </Link>
         </div>
       </section>
