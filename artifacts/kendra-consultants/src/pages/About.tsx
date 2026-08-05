@@ -113,7 +113,7 @@ export default function About() {
                 phone: "+94 71 331 5789"
               },
               {
-                country: "Qatar",
+                country: "Middle East",
                 city: "Doha",
                 address: "Office 45, West Bay Commercial Centre, Diplomatic Area, Doha",
                 phone: "+974 4423 8910"

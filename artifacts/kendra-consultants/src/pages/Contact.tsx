@@ -37,7 +37,7 @@ const offices = {
   },
   qatar: {
     id: "qatar",
-    name: "Qatar",
+    name: "Middle East",
     address: "Office 45, West Bay Commercial Centre, Diplomatic Area, Doha",
     phone: "+974 4423 8910",
     email: "qatar@consultkendra.com",
