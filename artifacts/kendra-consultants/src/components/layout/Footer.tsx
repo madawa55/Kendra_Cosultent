@@ -10,7 +10,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3">
-              <img src={mainLogo} alt="Kendra Consultants Logo" className="h-12 w-12 object-contain bg-white p-1" />
+              <img src={mainLogo} alt="Kendra Consultants Logo" className="h-12 w-12 object-contain" />
               <div className="flex flex-col text-white leading-tight">
                 <span className="font-serif font-bold text-xl tracking-wider uppercase">KENDRA</span>
                 <span className="text-[0.65rem] text-secondary tracking-[0.2em]">CONSULTANTS</span>
