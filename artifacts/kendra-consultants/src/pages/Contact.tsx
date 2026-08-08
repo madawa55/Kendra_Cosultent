@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Shell } from "@/components/layout/Shell";
-import { MapPin, Phone, Mail, Clock, CheckCircle2, Loader2 } from "lucide-react";
+import { Phone, Mail, Clock, CheckCircle2, Loader2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -27,11 +27,18 @@ const formSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters")
 });
 
-const offices = {
+interface Office {
+  id: string;
+  name: string;
+  phone?: string;
+  email: string;
+  hours: string;
+}
+
+const offices: Record<string, Office> = {
   sriLanka: {
     id: "srilanka",
-    name: "Sri Lanka (Headquarters)",
-    address: "Level 12, Parkland Building, 33 Park Street, Colombo 02",
+    name: "Colombo, Sri Lanka (Headquarters)",
     phone: "+94 71 331 5789",
     email: "info@consultkendra.com",
     hours: "Mon-Fri, 8:30 AM - 5:30 PM (IST)"
@@ -39,16 +46,12 @@ const offices = {
   qatar: {
     id: "qatar",
     name: "Middle East",
-    address: "Office 45, West Bay Commercial Centre, Diplomatic Area, Doha",
-    phone: "+974 4423 8910",
     email: "info@consultkendra.com",
     hours: "Sun-Thu, 8:00 AM - 5:00 PM (AST)"
   },
   australia: {
     id: "australia",
     name: "Australia",
-    address: "Suite 8, Level 14, 333 Collins Street, Melbourne VIC 3000",
-    phone: "+61 3 9876 5432",
     email: "info@consultkendra.com",
     hours: "Mon-Fri, 9:00 AM - 5:00 PM (AEST)"
   }
@@ -58,7 +61,7 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
-  const [routedOffice, setRoutedOffice] = useState<typeof offices.sriLanka | null>(null);
+  const [routedOffice, setRoutedOffice] = useState<Office | null>(null);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -75,11 +78,11 @@ export default function Contact() {
 
   // Watch country to determine routing
   const selectedCountry = form.watch("country");
-  
+
   const getOfficeForCountry = (country: string) => {
     const middleEast = ["Qatar", "UAE", "Saudi Arabia", "Oman", "Bahrain", "Kuwait"];
     const oceania = ["Australia", "New Zealand", "Fiji"];
-    
+
     if (middleEast.includes(country)) return offices.qatar;
     if (oceania.includes(country)) return offices.australia;
     return offices.sriLanka; // Default
@@ -93,8 +96,7 @@ export default function Contact() {
 
     try {
       await submitInquiry(values);
-      const office = getOfficeForCountry(values.country);
-      setRoutedOffice(office);
+      setRoutedOffice(getOfficeForCountry(values.country));
       setSubmitted(true);
     } catch (err) {
       console.error("Failed to submit inquiry:", err);
@@ -313,14 +315,12 @@ export default function Contact() {
                   <h4 className="font-serif text-xl font-bold mb-4">{office.name}</h4>
                   
                   <div className="space-y-4 text-sm text-muted-foreground">
-                    <div className="flex items-start gap-3">
-                      <MapPin className="w-5 h-5 text-primary shrink-0" />
-                      <p>{office.address}</p>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Phone className="w-5 h-5 text-primary shrink-0" />
-                      <p>{office.phone}</p>
-                    </div>
+                    {office.phone && (
+                      <div className="flex items-center gap-3">
+                        <Phone className="w-5 h-5 text-primary shrink-0" />
+                        <p>{office.phone}</p>
+                      </div>
+                    )}
                     <div className="flex items-center gap-3">
                       <Mail className="w-5 h-5 text-primary shrink-0" />
                       <p>{office.email}</p>

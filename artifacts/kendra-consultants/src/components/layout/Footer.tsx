@@ -65,29 +65,26 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Global Presence */}
+          {/* Global Offices */}
           <div>
             <h4 className="font-serif text-lg font-semibold mb-6 text-white tracking-wide">Global Offices</h4>
             <ul className="space-y-5">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                 <div className="text-sm text-white/70">
-                  <strong className="block text-white mb-1">Sri Lanka (HQ)</strong>
-                  Level 12, Parkland Building, Colombo 02
+                  <strong className="block text-white mb-1">Colombo, Sri Lanka</strong>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                 <div className="text-sm text-white/70">
                   <strong className="block text-white mb-1">Middle East</strong>
-                  Office 45, West Bay Commercial, Doha
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                 <div className="text-sm text-white/70">
                   <strong className="block text-white mb-1">Australia</strong>
-                  Suite 8, Collins Street, Melbourne VIC
                 </div>
               </li>
             </ul>

@@ -124,7 +124,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* International Presence */}
+      {/* Global Offices */}
       <section className="py-24 bg-primary text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
         

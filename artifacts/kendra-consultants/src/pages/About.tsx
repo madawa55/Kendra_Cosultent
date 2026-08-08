@@ -100,30 +100,21 @@ export default function About() {
             {[
               {
                 country: "Sri Lanka",
-                city: "Colombo (HQ)",
-                address: "Level 12, Parkland Building, 33 Park Street, Colombo 02",
-                phone: "+94 71 331 5789"
+                city: "Colombo (HQ)"               
+              
               },
               {
-                country: "Middle East",
-                city: "Doha",
-                address: "Office 45, West Bay Commercial Centre, Diplomatic Area, Doha",
-                phone: "+974 4423 8910"
+                country: "Middle East"                
               },
               {
-                country: "Australia",
-                city: "Melbourne",
-                address: "Suite 8, Level 14, 333 Collins Street, Melbourne VIC 3000",
-                phone: "+61 3 9876 5432"
+                country: "Australia"              
               }
             ].map((office, idx) => (
               <div key={idx} className="border border-border p-8 hover:border-secondary transition-colors group">
                 <MapPin className="w-8 h-8 text-primary mb-6 group-hover:text-secondary transition-colors" />
                 <h4 className="font-serif text-2xl font-bold mb-2">{office.country}</h4>
                 <p className="text-sm font-semibold text-secondary mb-4 uppercase tracking-wider">{office.city}</p>
-                <div className="text-muted-foreground space-y-2">
-                  <p>{office.address}</p>
-                  <p className="font-medium text-foreground pt-4">{office.phone}</p>
+                <div className="text-muted-foreground space-y-2">              
                 </div>
               </div>
             ))}
