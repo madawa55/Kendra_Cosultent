@@ -2,8 +2,14 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight, Building2, Globe2, MapPin, ShieldCheck, Users } from "lucide-react";
 import { Shell } from "@/components/layout/Shell";
-import bannerLogo from "@assets/WhatsApp_Image_2026-07-19_at_08.19.04_1784638489446.jpeg";
 import mdPhoto from "@assets/Managin_director_1784638489447.jpeg";
+import kendraLogo from "@assets/kendra-logo-transparent.png";
+import costPlanningImg from "@assets/01_Cost_Planning_and_Estimating.png";
+import procurementImg from "@assets/02_Procurement_and_Tendering.png";
+import commercialImg from "@assets/03_Commercial_and_Contract_Management.png";
+import claimsImg from "@assets/04_Claims_and_Dispute_Management.png";
+import contractorImg from "@assets/05_Contractor_Advisory_Services.png";
+import academicImg from "@assets/06_Academic_Services_and_Research.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -38,6 +44,16 @@ export default function Home() {
             variants={staggerContainer}
             className="max-w-4xl mx-auto"
           >
+            <motion.div
+              variants={fadeInUp}
+              className="flex justify-center mb-6"
+            >
+              <img
+                src={kendraLogo}
+                alt="Kendra Consultants logo"
+                className="w-75 md:w-96 h-auto"
+              />
+            </motion.div>
             <motion.h1 
               variants={fadeInUp}
               className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tight leading-tight mb-6"
@@ -109,8 +125,29 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex justify-center mb-16">
-            <img src={bannerLogo} alt="Kendra Services Banner" className="max-w-full h-auto rounded-lg shadow-xl" />
+          <div className="grid grid-cols-6 gap-6 items-center mb-16">
+            {[
+              { src: costPlanningImg, alt: "Cost Planning and Estimating" },
+              { src: procurementImg, alt: "Procurement and Tendering" },
+              { src: commercialImg, alt: "Commercial and Contract Management" },
+              { src: claimsImg, alt: "Claims and Dispute Management" },
+              { src: contractorImg, alt: "Contractor Advisory Services" },
+              { src: academicImg, alt: "Academic Services and Research" },
+            ].map((img, i) => (
+              <div key={i} className="relative">
+                {i > 0 && (
+                  <span
+                    aria-hidden="true"
+                    className="absolute left-[-12px] top-1/2 -translate-y-1/2 h-3/4 w-px bg-foreground/20"
+                  />
+                )}
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-auto"
+                />
+              </div>
+            ))}
           </div>
 
           <div className="text-center">

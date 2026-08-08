@@ -15,7 +15,7 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* Coming Soon Section */}
+      {/* Under Construction Section */}
       <section className="py-32 bg-background min-h-[50vh] flex items-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -28,12 +28,8 @@ export default function Projects() {
             Portfolio
           </h2>
           <h3 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
-            Coming Soon
+            Under Construction
           </h3>
-          <p className="text-muted-foreground leading-relaxed">
-            We're currently onboarding our first clients across Sri Lanka, the Middle East and Australia.
-            Our project portfolio will be showcased here as we deliver.
-          </p>
         </motion.div>
       </section>
     </Shell>
