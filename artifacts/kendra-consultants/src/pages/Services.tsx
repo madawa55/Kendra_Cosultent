@@ -7,7 +7,7 @@ const services = [
   {
     icon: Calculator,
     title: "Cost Planning & Estimating",
-    description: "Rigorous financial modelling and cost forecasting from project inception through completion. We help clients establish realistic budgets, optimise project costs, and maintain financial control throughout the project lifecycle.",
+    description: "Rigorous financial modelling and cost forecasting from project inception through completion. We help clients establish realistic budgets, optimise project costs and maintain financial control throughout the project lifecycle.",
     features: [
       "Feasibility Cost Estimates",
       "Cost Planning & Budget Development",
@@ -20,7 +20,7 @@ const services = [
   {
     icon: Briefcase,
     title: "Procurement & Tendering",
-    description: "Strategic procurement advice and tender management to secure the right contractors, achieve commercial certainty, and maximise value throughout the procurement process.",
+    description: "Strategic procurement advice and tender management to secure the right contractors, achieve commercial certainty and maximise value throughout the procurement process.",
     features: [
       "Procurement Strategy Development",
       "Preparation of Tender Documentation",
@@ -32,7 +32,7 @@ const services = [
   {
     icon: FileSignature,
     title: "Commercial & Contract Management",
-    description: "Proactive contract and commercial management services that protect client interests, promote contractual compliance, manage commercial risk, and provide effective financial control throughout the project lifecycle.",
+    description: "Proactive contract and commercial management services that protect client interests, promote contractual compliance, manage commercial risk and provide effective financial control throughout the project lifecycle.",
     features: [
       "Contract Administration",
       "Interim Valuations & Payment Certification",
@@ -45,7 +45,7 @@ const services = [
   {
     icon: Scale,
     title: "Claims & Dispute Management",
-    description: "Professional claims consultancy and commercial advice to support the preparation, evaluation, and resolution of contractual claims while minimising the impact of disputes.",
+    description: "Professional claims consultancy and commercial advice to support the preparation, evaluation and resolution of contractual claims while minimising the impact of disputes.",
     features: [
       "Delay & Disruption Analysis",
       "Extension of Time (EOT) Assessments",

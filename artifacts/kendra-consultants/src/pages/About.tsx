@@ -11,7 +11,7 @@ export default function About() {
         <div className="container mx-auto px-4 md:px-6 lg:px-8 text-center max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">About Us</h1>
           <p className="text-lg text-white/80 font-light leading-relaxed">
-            Kendra Consultants is a globally trusted consultancy firm committed to shaping the future of the built environment through integrity, precision, and professional excellence.
+            Kendra Consultants is a globally trusted consultancy firm committed to shaping the future of the built environment through integrity, precision and professional excellence.
           </p>
         </div>
       </section>
@@ -46,9 +46,10 @@ export default function About() {
               <div className="space-y-6 text-foreground/80 leading-relaxed">
                 <p>
                   Kendra Consultants was founded with a vision to establish a trusted consultancy that delivers professional excellence, integrity and value across the built environment. The firm is driven by a commitment to precision, ethical practice and creating meaningful outcomes for clients.
-Supported by a team committed to professional excellence, Kendra Consultants applies industry knowledge, commercial insight and collaborative approaches to deliver informed decisions and value-driven outcomes throughout the project lifecycle.
-
-                </p>
+                  </p>
+                  <p>
+                    Supported by a team committed to professional excellence, Kendra Consultants applies industry knowledge, commercial insight and collaborative approaches to deliver informed decisions and value-driven outcomes throughout the project lifecycle.
+                    </p>
                 <p>
                   Through Kendra Consultants, the focus remains on embracing international best practices, strengthening industry standards and contributing to a sustainable and progressive built environment.
                 </p>                

@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { ArrowRight, Building2, Globe2, MapPin, ShieldCheck, Users } from "lucide-react";
 import { Shell } from "@/components/layout/Shell";
 import mdPhoto from "@assets/Managin_director_1784638489447.jpeg";
-import kendraLogo from "@assets/kendra-logo-transparent.png";
+import kendraLogo from "@assets/kendra-logo-transparent.svg";
 import costPlanningImg from "@assets/01_Cost_Planning_and_Estimating.png";
 import procurementImg from "@assets/02_Procurement_and_Tendering.png";
 import commercialImg from "@assets/03_Commercial_and_Contract_Management.png";
@@ -51,7 +51,7 @@ export default function Home() {
               <img
                 src={kendraLogo}
                 alt="Kendra Consultants logo"
-                className="w-75 md:w-96 h-auto"
+                className="mx-auto w-3/4 max-w-[420px] md:w-96 h-auto"
               />
             </motion.div>
             <motion.h1 
@@ -177,7 +177,7 @@ export default function Home() {
               <div className="space-y-6">
                 {[
                   { country: "Sri Lanka", city: "Colombo", role: "Head Office" },
-                  { country: "Middle East", city: "Dubai,United Arab Emirates"},
+                  { country: "Middle East", city: "Dubai, United Arab Emirates"},
                   { country: "Australia", city: "" }
                 ].map((office, i) => (
                   <div key={i} className="flex items-center gap-4 p-4 border border-white/10 bg-white/5 backdrop-blur-sm">

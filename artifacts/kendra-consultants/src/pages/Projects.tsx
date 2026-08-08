@@ -10,7 +10,7 @@ export default function Projects() {
         <div className="container mx-auto px-4 md:px-6 lg:px-8 text-center max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">Project Portfolio</h1>
           <p className="text-lg text-white/80 font-light leading-relaxed">
-            A selection of high-profile developments where our commercial precision secures the project's financial success.
+            A selection of projects showcasing our expertise and experience in delivering sound commercial solutions and value throughout the project lifecycle.
           </p>
         </div>
       </section>

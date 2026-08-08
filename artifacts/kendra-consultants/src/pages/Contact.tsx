@@ -30,6 +30,9 @@ const formSchema = z.object({
 interface Office {
   id: string;
   name: string;
+  country: string;
+  city?: string;
+  role?: string;
   phone?: string;
   email: string;  
 }
@@ -38,17 +41,23 @@ const offices: Record<string, Office> = {
   sriLanka: {
     id: "srilanka",
     name: "Sri Lanka, Colombo (Head Office)",
+    country: "Sri Lanka",
+    city: "Colombo",
+    role: "Head Office",
     phone: "+94 71 331 5789",
     email: "info@consultkendra.com"    
   },
   qatar: {
     id: "qatar",
     name: "Middle East, Dubai, United Arab Emirates",
+    country: "Middle East",
+    city: "Dubai, United Arab Emirates",
     email: "info@consultkendra.com"    
   },
   australia: {
     id: "australia",
     name: "Australia",
+    country: "Australia",
     email: "info@consultkendra.com"   
   }
 };
@@ -308,7 +317,12 @@ export default function Contact() {
                       : "border-border bg-card hover:border-primary/30"
                   }`}
                 >
-                  <h4 className="font-serif text-xl font-bold mb-4">{office.name}</h4>
+                  <h4 className="font-serif text-xl font-bold mb-1">{office.country}</h4>
+                  {office.city && (
+                    <p className="text-sm text-muted-foreground mb-4 pl-3 border-l border-primary/20">
+                      {office.city}{office.role && ` (${office.role})`}
+                    </p>
+                  )}
                   
                   <div className="space-y-4 text-sm text-muted-foreground">
                     {office.phone && (
