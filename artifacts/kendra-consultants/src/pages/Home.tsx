@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight, Building2, Globe2, MapPin, ShieldCheck, Users } from "lucide-react";
 import { Shell } from "@/components/layout/Shell";
@@ -11,12 +11,12 @@ import claimsImg from "@assets/04_Claims_and_Dispute_Management.png";
 import contractorImg from "@assets/05_Contractor_Advisory_Services.png";
 import academicImg from "@assets/06_Academic_Services_and_Research.png";
 
-const fadeInUp = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -169,7 +169,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-secondary font-bold tracking-[0.2em] text-sm uppercase mb-4">Global Reach</h2>
-              <h3 className="text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight">"Precision Beyond Borders"</h3>
+              <h3 className="text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight">"Connecting Expertise Across Markets"</h3>
               <p className="text-white/70 leading-relaxed mb-8 text-lg">
                 With a strategic presence across Sri Lanka, the Middle East and Australia, we bring trusted expertise, commercial insight and professional excellence to support clients in delivering successful projects across international markets.
               </p>
@@ -196,7 +196,7 @@ export default function Home() {
                 <Globe2 className="w-96 h-96 text-white" strokeWidth={0.5} />
               </div>
               <div className="relative z-10 text-center">
-                <h4 className="font-serif text-3xl italic mb-4">"Connecting Expertise Across Markets"</h4>
+                <h4 className="font-serif text-3xl italic mb-4">"Precision Beyond Borders"</h4>
                 <p className="text-secondary">— Kendra Consultants</p>
               </div>
             </div>
