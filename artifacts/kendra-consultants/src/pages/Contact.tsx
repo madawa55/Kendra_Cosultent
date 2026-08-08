@@ -31,29 +31,25 @@ interface Office {
   id: string;
   name: string;
   phone?: string;
-  email: string;
-  hours: string;
+  email: string;  
 }
 
 const offices: Record<string, Office> = {
   sriLanka: {
     id: "srilanka",
-    name: "Colombo, Sri Lanka (Headquarters)",
+    name: "Sri Lanka, Colombo (Head Office)",
     phone: "+94 71 331 5789",
-    email: "info@consultkendra.com",
-    hours: "Mon-Fri, 8:30 AM - 5:30 PM (IST)"
+    email: "info@consultkendra.com"    
   },
   qatar: {
     id: "qatar",
-    name: "Middle East",
-    email: "info@consultkendra.com",
-    hours: "Sun-Thu, 8:00 AM - 5:00 PM (AST)"
+    name: "Middle East, Dubai, United Arab Emirates",
+    email: "info@consultkendra.com"    
   },
   australia: {
     id: "australia",
     name: "Australia",
-    email: "info@consultkendra.com",
-    hours: "Mon-Fri, 9:00 AM - 5:00 PM (AEST)"
+    email: "info@consultkendra.com"   
   }
 };
 
@@ -190,7 +186,7 @@ export default function Contact() {
                             <FormItem>
                               <FormLabel className="text-foreground font-semibold">Phone Number *</FormLabel>
                               <FormControl>
-                                <Input placeholder="+1 234 567 8900" className="bg-background border-border rounded-none" {...field} />
+                                <Input placeholder="+94 71 331 5789" className="bg-background border-border rounded-none" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -324,11 +320,7 @@ export default function Contact() {
                     <div className="flex items-center gap-3">
                       <Mail className="w-5 h-5 text-primary shrink-0" />
                       <p>{office.email}</p>
-                    </div>
-                    <div className="flex items-start gap-3 pt-2 border-t border-border mt-2">
-                      <Clock className="w-5 h-5 text-primary shrink-0" />
-                      <p>{office.hours}</p>
-                    </div>
+                    </div>                    
                   </div>
                 </div>
               ))}

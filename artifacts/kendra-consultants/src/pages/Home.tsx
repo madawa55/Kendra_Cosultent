@@ -93,7 +93,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {[
               { icon: Globe2, value: "3", label: "Markets Served" },
-              { icon: Building2, value: "4", label: "Core Service Areas" },
+              { icon: Building2, value: "6", label: "Core Service Areas" },
               { icon: ShieldCheck, value: "100%", label: "Commitment to Excellence" },
               { icon: Users, value: "24/7", label: "Client Support" },
             ].map((stat, i) => (
@@ -121,7 +121,7 @@ export default function Home() {
             <h2 className="text-secondary font-bold tracking-[0.2em] text-sm uppercase mb-4">Our Expertise</h2>
             <h3 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">Delivering Confidence at Every Stage</h3>
             <p className="text-muted-foreground leading-relaxed">
-              We provide integrated quantity surveying, commercial management, procurement, contract advisory and claims consultancy services across Sri Lanka, the Middle East and Australia. Combining technical expertise, commercial acumen, and a commitment to ethical excellence, we support clients in making strategic decisions, optimizing project performance, mitigating risks, and delivering sustainable value throughout the project lifecycle.
+              We provide integrated quantity surveying, commercial management, procurement, contract advisory and claims consultancy services across Sri Lanka, the Middle East and Australia. Combining technical expertise, commercial acumen and a commitment to ethical excellence, we support clients in making strategic decisions, optimizing project performance, mitigating risks, and delivering sustainable value throughout the project lifecycle.
             </p>
           </div>
 
@@ -176,15 +176,15 @@ export default function Home() {
               
               <div className="space-y-6">
                 {[
-                  { country: "Sri Lanka", city: "Colombo", role: "Headquarters" },
-                  { country: "Middle East", city: "Doha, Qatar", role: "Middle East Hub" },
-                  { country: "Australia", city: "Melbourne", role: "Asia Pacific Hub" }
+                  { country: "Sri Lanka", city: "Colombo", role: "Head Office" },
+                  { country: "Middle East", city: "Dubai,United Arab Emirates"},
+                  { country: "Australia", city: "" }
                 ].map((office, i) => (
                   <div key={i} className="flex items-center gap-4 p-4 border border-white/10 bg-white/5 backdrop-blur-sm">
                     <MapPin className="w-6 h-6 text-secondary" />
                     <div>
                       <h4 className="font-semibold text-lg">{office.country}</h4>
-                      <p className="text-sm text-white/50">{office.city} — {office.role}</p>
+                      <p className="text-sm text-white/50">{office.city}{office.role && ` — ${office.role}`}</p>
                     </div>
                   </div>
                 ))}

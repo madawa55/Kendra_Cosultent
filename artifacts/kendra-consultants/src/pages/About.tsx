@@ -99,11 +99,12 @@ Supported by a team committed to professional excellence, Kendra Consultants app
             {[
               {
                 country: "Sri Lanka",
-                city: "Colombo (HQ)"               
+                city: "Colombo (Head Office)"               
               
               },
               {
-                country: "Middle East"                
+                country: "Middle East",
+                city: "Dubai, United Arab Emirates"                
               },
               {
                 country: "Australia"              

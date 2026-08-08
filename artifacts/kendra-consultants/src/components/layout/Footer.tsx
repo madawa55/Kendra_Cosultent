@@ -17,7 +17,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed pr-4">
-              Built on Trust. Driven by Precision. Delivering trusted construction consultancy across Sri Lanka, the Middle East and Australia.
+             A globally trusted leader in shaping the future of the built environment.
             </p>
           </div>
 
@@ -52,9 +52,9 @@ export function Footer() {
               {[
                 "Cost Planning & Estimating",
                 "Procurement & Tendering",
-                "Commercial & Contract",
-                "Claims & Dispute",
-                "Contractor Advisory",
+                "Commercial & Contract Management",
+                "Claims & Dispute Management",
+                "Contractor Advisory Services",
                 "Academic Services",
               ].map((service) => (
                 <li key={service} className="text-white/70 text-sm flex items-center gap-2">
@@ -69,24 +69,23 @@ export function Footer() {
           <div>
             <h4 className="font-serif text-lg font-semibold mb-6 text-white tracking-wide">Global Offices</h4>
             <ul className="space-y-5">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-                <div className="text-sm text-white/70">
-                  <strong className="block text-white mb-1">Colombo, Sri Lanka</strong>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-                <div className="text-sm text-white/70">
-                  <strong className="block text-white mb-1">Middle East</strong>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-                <div className="text-sm text-white/70">
-                  <strong className="block text-white mb-1">Australia</strong>
-                </div>
-              </li>
+              {[
+                { country: "Sri Lanka", city: "Colombo", role: "Head Office" },
+                { country: "Middle East", city: "Dubai, United Arab Emirates" },
+                { country: "Australia", city: "" },
+              ].map((office) => (
+                <li key={office.country} className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                  <div className="text-sm text-white/70">
+                    <strong className="block text-white mb-1">{office.country}</strong>
+                    {office.city && (
+                      <span className="block border-l border-white/20 pl-3">
+                        {office.city}{office.role && <> — {office.role}</>}
+                      </span>
+                    )}
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
