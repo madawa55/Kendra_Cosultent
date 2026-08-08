@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: inquiries
+    description: Website inquiry submissions
 paths:
   /healthz:
     get:
@@ -24,6 +26,37 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /inquiries:
+    post:
+      operationId: submitInquiry
+      tags: [inquiries]
+      summary: Submit a website inquiry
+      description: Submits a contact form inquiry which is emailed to the company inbox
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/InquiryRequest"
+      responses:
+        "201":
+          description: Inquiry submitted successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/InquiryResponse"
+        "400":
+          description: Invalid inquiry payload
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Failed to deliver the inquiry
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +66,43 @@ components:
           type: string
       required:
         - status
+    InquiryRequest:
+      type: object
+      properties:
+        fullName:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        country:
+          type: string
+        service:
+          type: string
+        subject:
+          type: string
+        message:
+          type: string
+      required:
+        - fullName
+        - email
+        - phone
+        - country
+        - service
+        - subject
+        - message
+    InquiryResponse:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error
 

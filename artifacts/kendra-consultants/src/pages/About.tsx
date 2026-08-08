@@ -19,18 +19,18 @@ export default function About() {
       {/* MD Section */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 items-center">
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative w-fit"
             >
               <div className="absolute inset-0 bg-secondary translate-x-4 translate-y-4" />
               <img 
                 src={mdPhoto} 
                 alt="Kaushala Fonseka, Founder & Managing Director" 
-                className="relative z-10 w-full h-[600px] object-cover border border-border grayscale hover:grayscale-0 transition-all duration-500"
+                className="relative z-10 w-80 md:w-96 h-auto border border-border transition-all duration-500"
               />
             </motion.div>
             
@@ -53,14 +53,6 @@ export default function About() {
                 <p>
                   Supported by a team committed to professional excellence, Kendra Consultants applies industry knowledge, commercial insight and collaborative approaches to deliver informed decisions and value-driven outcomes throughout the project lifecycle. Through Kendra Consultants, the focus remains on embracing international best practices, strengthening industry standards and contributing to a sustainable and progressive built environment.
                 </p>
-              </div>
-              
-              <div className="mt-10">
-                <img 
-                  src="/attached_assets/WhatsApp_Image_2026-07-19_at_08.19.03_1784638489447.jpeg" 
-                  alt="Signature Logo" 
-                  className="h-16 object-contain opacity-50 grayscale"
-                />
               </div>
             </motion.div>
           </div>

@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Shell } from "@/components/layout/Shell";
-import { MapPin, Phone, Mail, Clock, CheckCircle2 } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, CheckCircle2, Loader2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { submitInquiry } from "@workspace/api-client-react";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -55,6 +56,8 @@ const offices = {
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [routedOffice, setRoutedOffice] = useState<typeof offices.sriLanka | null>(null);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -84,10 +87,23 @@ export default function Contact() {
 
   const currentMatchedOffice = selectedCountry ? getOfficeForCountry(selectedCountry) : null;
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    const office = getOfficeForCountry(values.country);
-    setRoutedOffice(office);
-    setSubmitted(true);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      await submitInquiry(values);
+      const office = getOfficeForCountry(values.country);
+      setRoutedOffice(office);
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Failed to submit inquiry:", err);
+      setSubmitError(
+        "Sorry, we couldn't submit your inquiry right now. Please try again or email us directly at info@consultkendra.com."
+      );
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -261,11 +277,19 @@ export default function Contact() {
                         )}
                       />
 
+                      {submitError && (
+                        <div className="p-4 bg-red-50 border border-red-200 text-red-700 text-sm">
+                          {submitError}
+                        </div>
+                      )}
+
                       <button
                         type="submit"
-                        className="w-full bg-primary text-white py-4 font-bold tracking-widest text-sm hover:bg-primary/90 transition-colors uppercase"
+                        disabled={submitting}
+                        className="w-full bg-primary text-white py-4 font-bold tracking-widest text-sm hover:bg-primary/90 transition-colors uppercase disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                       >
-                        Submit Inquiry
+                        {submitting && <Loader2 className="w-4 h-4 animate-spin" />}
+                        {submitting ? "Sending..." : "Submit Inquiry"}
                       </button>
                     </form>
                   </Form>

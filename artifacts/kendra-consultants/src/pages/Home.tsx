@@ -76,10 +76,10 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {[
-              { icon: Globe2, value: "3", label: "Global Offices" },
-              { icon: Building2, value: "150+", label: "Projects Delivered" },
-              { icon: ShieldCheck, value: "$2.5B+", label: "Value Managed" },
-              { icon: Users, value: "25+", label: "Years Experience" },
+              { icon: Globe2, value: "3", label: "Markets Served" },
+              { icon: Building2, value: "4", label: "Core Service Areas" },
+              { icon: ShieldCheck, value: "100%", label: "Commitment to Excellence" },
+              { icon: Users, value: "24/7", label: "Client Support" },
             ].map((stat, i) => (
               <motion.div 
                 key={i}

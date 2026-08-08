@@ -10,6 +10,7 @@ _Replace the heading above with the project's name, and this line with one sente
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
 - `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
 - Required env: `DATABASE_URL` — Postgres connection string
+- Inquiry emails require `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS` (see `.env.example`)
 
 ## Stack
 
