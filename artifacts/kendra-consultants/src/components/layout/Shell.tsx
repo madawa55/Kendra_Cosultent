@@ -15,7 +15,7 @@ export function Shell({ children }: { children: ReactNode }) {
         style={{
           backgroundImage: `url(${watermark})`,
           backgroundSize: "55% auto",
-          backgroundPosition: "center",
+          backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
         }}
       />

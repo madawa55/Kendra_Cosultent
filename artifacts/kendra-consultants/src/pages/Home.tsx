@@ -3,7 +3,6 @@ import { Link } from "wouter";
 import { ArrowRight, Building2, Globe2, MapPin, ShieldCheck, Users } from "lucide-react";
 import { Shell } from "@/components/layout/Shell";
 import mdPhoto from "@assets/Managin_director_1784638489447.jpeg";
-import kendraLogo from "@assets/kendra-logo-transparent.png";
 import costPlanningImg from "@assets/01_Cost_Planning_and_Estimating.png";
 import procurementImg from "@assets/02_Procurement_and_Tendering.png";
 import commercialImg from "@assets/03_Commercial_and_Contract_Management.png";
@@ -48,11 +47,19 @@ export default function Home() {
               variants={fadeInUp}
               className="flex justify-center mb-6"
             >
-              <img
-                src={kendraLogo}
-                alt="Kendra Consultants logo"
-                className="w-75 md:w-96 h-auto"
-              />
+              <div
+                className="kendra-logo"
+                role="img"
+                aria-label="Kendra Consultants logo"
+              >
+                <span className="kendra-logo-wordmark font-serif font-black tracking-tight text-4xl md:text-6xl lg:text-7xl">
+                  KENDRA
+                </span>
+                <span className="kendra-logo-tagline">CONSULTANTS</span>
+                <span className="kendra-logo-rule">
+                  <span className="kendra-logo-diamond" />
+                </span>
+              </div>
             </motion.div>
             <motion.h1 
               variants={fadeInUp}
