@@ -1,0 +1,36 @@
+◇ injected env (7) from ..\..\.env // tip: ⌁ auth for agents [www.vestauth.com]
+[06:26:23.118] [32mINFO[39m (14960): [36mServer listening[39m
+    [35mport[39m: 5000
+[06:26:23.183] [32mINFO[39m (14960): [36mrequest completed[39m
+    [35mreq[39m: {
+      "id": 1,
+      "method": "GET",
+      "url": "/api/healthz"
+    }
+    [35mres[39m: {
+      "statusCode": 200
+    }
+    [35mresponseTime[39m: 9
+[06:26:23.511] [32mINFO[39m (14960): [36mrequest completed[39m
+    [35mreq[39m: {
+      "id": 2,
+      "method": "GET",
+      "url": "/api/healthz"
+    }
+    [35mres[39m: {
+      "statusCode": 200
+    }
+    [35mresponseTime[39m: 1
+[06:26:28.290] [32mINFO[39m (14960): [36mInquiry email sent[39m
+    [35mmessageId[39m: "<946e20de-fe43-1646-16f0-97ddfaa04591@gmail.com>"
+    [35mto[39m: "info@consultkendra.com"
+[06:26:28.292] [32mINFO[39m (14960): [36mrequest completed[39m
+    [35mreq[39m: {
+      "id": 3,
+      "method": "POST",
+      "url": "/api/inquiries"
+    }
+    [35mres[39m: {
+      "statusCode": 201
+    }
+    [35mresponseTime[39m: 4405
